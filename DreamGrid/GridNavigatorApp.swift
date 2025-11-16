@@ -10,8 +10,7 @@ struct GridNavigatorApp: App {
 }
 
 struct ContentView: View {
-    @StateObject private var dataStore = GridDataStore()
-    
+    @StateObject private var dataStore: GridDataStore
     @State private var navigationStack: [UUID] = []
     @Namespace private var gridAnimation
     

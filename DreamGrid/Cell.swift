@@ -10,11 +10,10 @@ struct CellView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 2)
                 .fill(backgroundColor)
-//                .shadow(color: .black.opacity(0.2), radius: 0, x: 2, y: 2)
+                .stroke(Color(.systemGray2), lineWidth: 2)
 
             contentView
                 .padding(8)
-                .foregroundColor(.white)
                 .contentTransition(.symbolEffect(.replace))
                 .id(model.content + "\(model.progress?.completed ?? 0)")
         }
@@ -69,12 +68,13 @@ struct CellView: View {
     private var backgroundColor: Color {
         switch model.type {
         case .link:
-            return .purple
+            return .white
         case .categoryTitle:
-            return .gray
+            return .white
         case .actionItem:
-            if model.content.isEmpty { return Color.gray.opacity(0.3) }
-            return model.isComplete == true ? .green : .blue
+            if model.content.isEmpty { return .white }
+            
+            return model.isComplete == true ? Color(.systemGray6) : .white
         }
     }
 }
