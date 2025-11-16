@@ -1,0 +1,55 @@
+### Swift ###
+# Standard library
+*.o
+*.out
+*.repl
+*.lcov
+*.profraw
+
+# Swift Package Manager
+.build/
+Packages/
+*.xcodeproj
+*.xcworkspace
+Package.resolved
+Package.swift-in-process
+
+# Cocoapods
+Pods/
+
+# Carthage
+Carthage/
+
+### Xcode ###
+# Generated files
+build/
+DerivedData/
+
+# User-specific files
+*.xcuserdatad
+*.xccheckout
+*.xcscmblueprint
+*.xcscheme
+*.xctan
+*.xcdummy
+*.xclangspec
+*.xcfilelist
+*.xcbuilddata
+*.xctestproducts
+*.xctestrun
+xcuserdata/
+*.modulemap
+profile
+
+# Other
+*.gcno
+*.moved-aside
+*.swp
+*~.nib
+.DS_Store
+*.orig
+
+# Sensitive Data - Add your own!
+# Example: A file holding your API keys
+Config/Keys.plist
+.env
